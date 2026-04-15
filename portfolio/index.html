@@ -4,47 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Ricci | Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about/index.html">About Me</a>
-        <a href="work/index.html">Work</a>
-        <a href="resume/index.html">Resume</a>
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Michael Ricci</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about/index.html">About Me</a></li>
+<li class="nav-item"><a class="nav-link" href="work/index.html">Work</a></li>
+<li class="nav-item"><a class="nav-link" href="resume/index.html">Resume</a></li>
+<li class="nav-item"><a class="nav-link" href="storytemplate/index.html">Story</a></li>
+</li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="container clearfix">
-        <img src="Black-N-White-Headshots-3_4AC-22-1200x800.jpg" alt="Michael Ricci" class="hero-image">
-
-        <h1>Hi, I'm Michael Ricci</h1>
-        <h2>Student, communicator, and aspiring sports business professional</h2>
-
-        <p>
-            I am a Syracuse University student with interests in sports media, NIL strategy, branding, marketing, and business development. 
-            My work is centered on communication, relationship-building, and helping athletes and brands tell stronger stories.
-        </p>
-
-        <p>
-            I am passionate about the business side of sports and the power of media to create opportunities. Whether I am working on athlete branding, 
-            content strategy, sales ideas, or journalism projects, I enjoy building things that connect people and create value.
-        </p>
-
-        <blockquote>
-            “I want to build a career where communication, sports, and business all come together.”
-        </blockquote>
-
-        <h3>What I Focus On</h3>
-        <ul>
-            <li>Sports business and athlete branding</li>
-            <li>Name, Image, and Likeness strategy</li>
-            <li>Media, storytelling, and content creation</li>
-            <li>Relationship-building and brand outreach</li>
-        </ul>
+    <!-- Begin Bootstrap Grid -->
+    <div class="container text-center mt-4">
+        <div class="row">
+            <div class="col-sm-7">
+                <blockquote>
+                    “I want to build a career where communication, sports, and business all come together.”
+                </blockquote>
+            </div>
+            <div class="col-sm-5">
+                <p>
+                    I am a Syracuse University student with interests in sports media, NIL strategy, branding, marketing, and business development.
+                    My work is centered on communication, relationship-building, and helping athletes and brands tell stronger stories.
+                </p>
+            </div>
+        </div>
     </div>
+    <!-- End Bootstrap Grid -->
+
+    <div class="container">
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Hi, I'm Michael Ricci</h1>
+            <h2>Student, communicator, and aspiring sports business professional</h2>
+
+            <p>
+                I am passionate about the business side of sports and the power of media to create opportunities. Whether I am working on athlete branding,
+                content strategy, sales ideas, or journalism projects, I enjoy building things that connect people and create value.
+            </p>
+
+            <h3>What I Focus On</h3>
+            <ul>
+                <li>Sports business and athlete branding</li>
+                <li>Name, Image, and Likeness strategy</li>
+                <li>Media, storytelling, and content creation</li>
+                <li>Relationship-building and brand outreach</li>
+            </ul>
+        </div>
+
+        <img src="Black-N-White-Headshots-3_4AC-22-1200x800.jpg" alt="Michael Ricci" class="hero-image">
+    </div>
+</div>
 
     <footer>
         &copy; 2026 Michael Ricci. All rights reserved.
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

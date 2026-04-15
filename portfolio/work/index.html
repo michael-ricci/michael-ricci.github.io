@@ -4,47 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Ricci | Work</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../about/index.html">About Me</a>
-        <a href="index.html">Work</a>
-        <a href="../resume/index.html">Resume</a>
-    </nav>
 
-    <div class="container">
-        <h1>My Work</h1>
-        <h2>Projects and professional interests</h2>
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Michael Ricci</a>
 
-        <div class="project-card">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#workNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="workNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="../about/index.html">About Me</a></li>
+<li class="nav-item"><a class="nav-link active" href="index.html">Work</a></li>
+<li class="nav-item"><a class="nav-link" href="../resume/index.html">Resume</a></li>
+<li class="nav-item"><a class="nav-link" href="../storytemplate/index.html">Story</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="project-card h-100">
             <h3>Athlete Branding & NIL Strategy</h3>
             <p>
                 I have worked on building athlete brand positioning, outreach strategy, and partnership concepts that connect athletes with brands in authentic ways.
                 This includes campaign ideas, brand pitches, and content-driven marketing strategy.
             </p>
         </div>
+    </div>
 
-        <div class="project-card">
+    <div class="col-md-4">
+        <div class="project-card h-100">
             <h3>Sports Media & Communication</h3>
             <p>
-                My background in journalism and media has helped me develop strong writing, interviewing, and storytelling skills. 
+                My background in journalism and media has helped me develop strong writing, interviewing, and storytelling skills.
                 I am interested in the intersection of media, influence, and sports business.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <h3>Business Development & Relationship Building</h3>
-            <p>
-                I enjoy the process of reaching out, making connections, and turning ideas into real opportunities. 
-                Much of my work reflects my interest in sales, negotiation, and helping people and brands grow.
             </p>
         </div>
     </div>
 
-    <footer>
-        &copy; 2026 Michael Ricci. All rights reserved.
-    </footer>
+    <div class="col-md-4">
+        <div class="project-card h-100">
+            <h3>Business Development & Relationship Building</h3>
+            <p>
+                I enjoy the process of reaching out, making connections, and turning ideas into real opportunities.
+                Much of my work reflects my interest in sales, negotiation, and helping people and brands grow.
+            </p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Michael Ricci. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
