@@ -12,25 +12,129 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .nil-metric-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+        .nil-metric {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+        .nil-metric-label {
+            font-size: 11px;
+            color: #6c757d;
+            margin: 0 0 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        .nil-metric-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .nil-metric-sub {
+            font-size: 11px;
+            color: #adb5bd;
+            margin: 3px 0 0;
+        }
+        .nil-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .nil-tab {
+            padding: 6px 16px;
+            font-size: 13px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            background: transparent;
+            color: #6c757d;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: all 0.15s;
+        }
+        .nil-tab.active {
+            background: #1a1a2e;
+            color: #fff;
+            border-color: #1a1a2e;
+        }
+        .nil-tab:hover:not(.active) {
+            background: #f1f3f5;
+        }
+        .nil-chart-panel { display: none; }
+        .nil-chart-panel.active { display: block; }
+        .nil-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .nil-legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .nil-source {
+            font-size: 11px;
+            color: #adb5bd;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+        .nil-viz-wrap {
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 8px;
+        }
+        .nil-viz-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            color: #1a1a2e;
+            margin: 0 0 4px;
+        }
+        .nil-viz-sub {
+            font-size: 13px;
+            color: #6c757d;
+            margin: 0 0 20px;
+        }
+        @media (max-width: 576px) {
+            .nil-metric-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">Michael Ricci</a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#storyNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="storyNav">
                 <ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="../about/index.html">About Me</a></li>
-<li class="nav-item"><a class="nav-link" href="../work/index.html">Work</a></li>
-<li class="nav-item"><a class="nav-link" href="../resume/index.html">Resume</a></li>
-<li class="nav-item"><a class="nav-link active" href="index.html">Story</a></li>
-</ul>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about/index.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../work/index.html">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../resume/index.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Story</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -50,7 +154,6 @@
             <div class="col-md-6">
                 <img src="../Black-N-White-Headshots-3_4AC-22-1200x800.jpg" alt="Story image" class="img-fluid story-image">
             </div>
-
             <div class="col-md-6">
                 <p>
                     This is where the main story text goes. In the wireframe, this section appears to the right of the image, creating a balanced two-column layout.
@@ -64,20 +167,194 @@
             </div>
         </div>
 
-        <div class="row mt-4">
+        <!-- NIL DATA VISUALIZATION -->
+        <div class="row mt-5">
             <div class="col-12">
-                <h2>More Story Content or Data Visualization</h2>
+                <h2>The NIL Economy: From $917M to $2.6B in Six Years</h2>
                 <p>
-                    This bottom section can be used for more text, a chart, a graphic, or a data visualization.
+                    Since college athletes gained the right to profit from their name, image, and likeness in July 2021, the NIL market has exploded — reshaping recruiting, branding, and the entire business of college sports.
                 </p>
-                <p>
-                    It matches the final full-width row in the wireframe.
-                </p>
+
+                <div class="nil-viz-wrap">
+                    <p class="nil-viz-title">College athlete NIL market at a glance</p>
+                    <p class="nil-viz-sub">Data from Opendorse Annual Reports &amp; RallyFuel NIL Earnings 2025</p>
+
+                    <div class="nil-metric-grid">
+                        <div class="nil-metric">
+                            <p class="nil-metric-label">NIL market 2021</p>
+                            <p class="nil-metric-value">$917M</p>
+                            <p class="nil-metric-sub">Year one</p>
+                        </div>
+                        <div class="nil-metric">
+                            <p class="nil-metric-label">NIL market 2025</p>
+                            <p class="nil-metric-value">$1.9B</p>
+                            <p class="nil-metric-sub">+107% since launch</p>
+                        </div>
+                        <div class="nil-metric">
+                            <p class="nil-metric-label">Projected 2027</p>
+                            <p class="nil-metric-value">$2.6B</p>
+                            <p class="nil-metric-sub">With revenue sharing</p>
+                        </div>
+                    </div>
+
+                    <div class="nil-tabs">
+                        <button class="nil-tab active" onclick="nilShowPanel('growth', this)">Market growth</button>
+                        <button class="nil-tab" onclick="nilShowPanel('sports', this)">By sport</button>
+                        <button class="nil-tab" onclick="nilShowPanel('segments', this)">Collective vs. commercial</button>
+                    </div>
+
+                    <!-- Tab: Market Growth -->
+                    <div id="nil-growth" class="nil-chart-panel active">
+                        <div class="nil-legend">
+                            <span><span class="nil-legend-dot" style="background:#2563EB;"></span>Actual</span>
+                            <span><span class="nil-legend-dot" style="background:#16A34A; border: 1px dashed #15803d;"></span>Projected</span>
+                        </div>
+                        <div style="position: relative; width: 100%; height: 300px;">
+                            <canvas id="nilGrowthChart" role="img" aria-label="Bar chart showing NIL market growth from $917M in 2021-22 to a projected $2.6B in 2026-27">NIL market: 2021-22 $0.92B, 2022-23 $1.14B, 2023-24 $1.2B, 2024-25 $1.67B, 2025-26 $1.9B (est), 2026-27 $2.6B (proj).</canvas>
+                        </div>
+                    </div>
+
+                    <!-- Tab: By Sport -->
+                    <div id="nil-sports" class="nil-chart-panel">
+                        <div class="nil-legend">
+                            <span><span class="nil-legend-dot" style="background:#2563EB;"></span>Share of collective NIL spending</span>
+                        </div>
+                        <div style="position: relative; width: 100%; height: 240px;">
+                            <canvas id="nilSportsChart" role="img" aria-label="Horizontal bar chart showing NIL spending split: football 72%, men's basketball 21%, all other sports 7%">Football 72.2%, Men's basketball 21.2%, All other sports 6.6%.</canvas>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Collective vs Commercial -->
+                    <div id="nil-segments" class="nil-chart-panel">
+                        <div class="nil-legend">
+                            <span><span class="nil-legend-dot" style="background:#2563EB;"></span>NIL collectives</span>
+                            <span><span class="nil-legend-dot" style="background:#16A34A;"></span>Commercial deals</span>
+                        </div>
+                        <div style="position: relative; width: 100%; height: 300px;">
+                            <canvas id="nilSegChart" role="img" aria-label="Stacked bar chart showing collective spending dominates at 80%+ of total NIL market">Collectives dominate the NIL market at over 80% across all years measured.</canvas>
+                        </div>
+                    </div>
+
+                    <p class="nil-source">Sources: Opendorse "NIL at 3" Annual Report (2024); RallyFuel NIL Earnings Report (2025); Reach Capital Beyond the Game Report</p>
+                </div>
             </div>
         </div>
+        <!-- END NIL DATA VISUALIZATION -->
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWLzeN8tE5YBujZqJLB" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script>
+        function nilShowPanel(id, btn) {
+            document.querySelectorAll('.nil-chart-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nil-tab').forEach(b => b.classList.remove('active'));
+            document.getElementById('nil-' + id).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        const gridColor = 'rgba(0,0,0,0.07)';
+        const labelColor = '#6c757d';
+
+        new Chart(document.getElementById('nilGrowthChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2021–22','2022–23','2023–24','2024–25','2025–26\n(est.)','2026–27\n(proj.)'],
+                datasets: [{
+                    label: 'NIL market ($B)',
+                    data: [0.917, 1.14, 1.2, 1.67, 1.9, 2.6],
+                    backgroundColor: ['#2563EB','#2563EB','#2563EB','#2563EB','#16A34A','#16A34A'],
+                    borderColor:     ['#1d4ed8','#1d4ed8','#1d4ed8','#1d4ed8','#15803d','#15803d'],
+                    borderWidth: [0,0,0,0,1,1],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => '$' + ctx.parsed.y.toFixed(2) + 'B' + (ctx.dataIndex >= 4 ? ' (est.)' : '')
+                        }
+                    }
+                },
+                scales: {
+                    x: { ticks: { color: labelColor, autoSkip: false, font: { size: 12 } }, grid: { display: false } },
+                    y: {
+                        ticks: { color: labelColor, callback: v => '$' + v.toFixed(1) + 'B', font: { size: 12 } },
+                        grid: { color: gridColor },
+                        min: 0, max: 3
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('nilSportsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Football','Men\'s basketball','All other sports'],
+                datasets: [{
+                    label: 'Share of NIL collective spending',
+                    data: [72.2, 21.2, 6.6],
+                    backgroundColor: ['#2563EB','#16A34A','#9ca3af'],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => ctx.parsed.x.toFixed(1) + '% of collective NIL' } }
+                },
+                scales: {
+                    x: { ticks: { color: labelColor, callback: v => v + '%', font: { size: 12 } }, grid: { color: gridColor }, min: 0, max: 100 },
+                    y: { ticks: { color: labelColor, font: { size: 12 } }, grid: { display: false } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('nilSegChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2021–22','2022–23','2023–24','2024–25'],
+                datasets: [
+                    {
+                        label: 'Collectives',
+                        data: [0.78, 0.97, 1.0, 1.38],
+                        backgroundColor: '#2563EB',
+                        borderRadius: 5,
+                        stack: 'total'
+                    },
+                    {
+                        label: 'Commercial',
+                        data: [0.137, 0.17, 0.2, 0.29],
+                        backgroundColor: '#16A34A',
+                        borderRadius: 5,
+                        stack: 'total'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(2) + 'B' } }
+                },
+                scales: {
+                    x: { ticks: { color: labelColor, autoSkip: false, font: { size: 12 } }, grid: { display: false } },
+                    y: {
+                        ticks: { color: labelColor, callback: v => '$' + v.toFixed(1) + 'B', font: { size: 12 } },
+                        grid: { color: gridColor },
+                        stacked: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
